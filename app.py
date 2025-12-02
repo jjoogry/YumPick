@@ -5,7 +5,6 @@ import random
 API_KEY = "키_입력"
 
 city_map = {
-    # 주요 광역시 및 특별시
     "서울": "Seoul",
     "부산": "Busan",
     "대구": "Daegu",
