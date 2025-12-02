@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 import random
 
-API_KEY = "b6db12e7e7757a04bc60562ae012bdf8"
+API_KEY = "키_입력"
 
 city_map = {
     # 주요 광역시 및 특별시
