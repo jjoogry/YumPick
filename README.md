@@ -1,12 +1,12 @@
 # 🍽️ 오늘 뭐 먹지?
-날씨 API를 활용한 식사 메뉴 추천 및 맛집 검색 서비스
+날씨 API를 활용한 식사 메뉴 추천 및 맛집 검색 서비스 
 
 ![Python](https://img.shields.io/badge/Python-3.9+-3776AB?style=flat&logo=python&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-FF4B4B?style=flat&logo=streamlit&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
 ## 프로젝트 소개
-**OpenWeatherMap API**를 통해 실시간 날씨 정보를 가져오고, 기온과 날씨 상태를 분석해 **메뉴를 추천**해주는 프로그램입니다. 사용자는 추천 받은 메뉴를 **평가**할 수 있으며, **네이버 맛집 검색**과 연동하여 식당 정보까지 한 번에 얻을 수 있도록 구현하였습니다.
+**OpenWeatherMap API**를 통해 실시간 날씨 정보를 가져오고, 기온과 날씨 상태를 분석해 **메뉴를 추천**해주는 프로그램입니다. 사용자는 추천 받은 메뉴를 **평가**할 수 있으며, **네이버 맛집 검색**과 연동하여 식당 정보까지 한 번에 얻을 수 있도록 구현하였습니다. [(웹사이트 실행)](https://yumpick-hu3xzwekjvyewtffh7z4uq.streamlit.app/)
 
 ## 실행 화면
 1. 초기 화면
