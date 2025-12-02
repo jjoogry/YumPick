@@ -60,8 +60,8 @@ streamlit run app.py
 - **사용자 위치 기반** 자동 도시 인식 기능을 도입해 지역 입력 없이 수행 가능
 
 ## 참고 자료
-- [Streamlit Official Documentation] https://docs.streamlit.io
-- [OpenWeatherMap API Documentation] https://openweathermap.org/api
+- [Streamlit Official Documentation](https://docs.streamlit.io)
+- [OpenWeatherMap API Documentation](https://openweathermap.org/api)
 
 ## 라이선스
 이 프로젝트는 **MIT License**를 따르므로, 누구나 자유롭게 수정 및 배포가 가능합니다.
