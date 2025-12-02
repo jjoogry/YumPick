@@ -239,13 +239,14 @@ if 'notification' not in st.session_state:
 
 st.markdown("<h1 style='text-align: center;'>🍽️ 오늘 뭐 먹지?</h1>", unsafe_allow_html=True)
 
-col_input, col_btn = st.columns([0.8, 0.2], vertical_alignment="bottom")
+with st.form(key='search_form'):
+    col_input, col_btn = st.columns([0.8, 0.2], vertical_alignment="bottom")
 
-with col_input:
-    user_input = st.text_input("도시 이름을 입력하세요 (예: 서울, 부산, 제주)")
+    with col_input:
+        user_input = st.text_input("도시 이름을 입력하세요 (예: 서울, 부산, 제주)")
 
-with col_btn:
-    is_clicked = st.button("메뉴 추천받기", use_container_width=True)
+    with col_btn:
+        is_clicked = st.form_submit_button("메뉴 추천받기", use_container_width=True)
 
 if is_clicked:
     clean_input = user_input.strip()
