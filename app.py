@@ -248,28 +248,33 @@ with col_btn:
     is_clicked = st.button("메뉴 추천받기", use_container_width=True)
 
 if is_clicked:
-    city_english = city_map.get(user_input, user_input)
-    data = get_weather(city_english)
-    
-    if data:
-        st.session_state['weather_data'] = data
-        w_main = data['weather'][0]['main']
-        tmp = data['main']['temp']
-        
-        candidates, comment = get_menu_candidates(w_main, tmp)
-        
-        st.session_state['menu_candidates'] = candidates
-        st.session_state['menu_comment'] = comment
-        st.session_state['rejected_menus'] = []
-        st.session_state['notification'] = None 
-        st.session_state['menu_confirmed'] = False
-        
-        if candidates:
-            picked = random.choice(candidates)
-            st.session_state['current_menu'] = picked
-            st.session_state['rejected_menus'].append(picked)
+    clean_input = user_input.strip()
+
+    if clean_input not in city_map:
+        st.error(f"'{clean_input}'은(는) 지원하지 않는 도시입니다.")
     else:
-        st.error(f"'{user_input}'을(를) 찾을 수 없습니다.")
+        city_english = city_map[clean_input]
+        data = get_weather(city_english)
+        
+        if data:
+            st.session_state['weather_data'] = data
+            w_main = data['weather'][0]['main']
+            tmp = data['main']['temp']
+            
+            candidates, comment = get_menu_candidates(w_main, tmp)
+            
+            st.session_state['menu_candidates'] = candidates
+            st.session_state['menu_comment'] = comment
+            st.session_state['rejected_menus'] = []
+            st.session_state['notification'] = None 
+            st.session_state['menu_confirmed'] = False
+            
+            if candidates:
+                picked = random.choice(candidates)
+                st.session_state['current_menu'] = picked
+                st.session_state['rejected_menus'].append(picked)
+        else:
+            st.error(f"잠시 후 다시 시도해주세요.")
 
 if st.session_state['weather_data']:
     data = st.session_state['weather_data']
