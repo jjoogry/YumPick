@@ -38,9 +38,9 @@ git clone https://github.com/jjoogry/YumPick.git
 ```bash
 pip install -r requirements.txt
 ```
-3. API 키 설정
+3. API 키 설정: app.py 코드에 입력
 ```python
-API_KEY = "키 입력"
+API_KEY = "키_입력"
 ```
 4. 실행
 ```bash
